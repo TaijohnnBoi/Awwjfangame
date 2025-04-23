@@ -6,7 +6,7 @@ public class GameTimer : MonoBehaviour
 {
     public TMP_Text clockText; // Link your GameClockText here in the Inspector
 
-    private float totalTime = 360f; // 6 minutes = 360 seconds
+    private float totalTime = 150; // 6 minutes = 360 seconds
     private string[] hours = { "12 PM", "1 PM", "2 PM", "3 PM", "4 PM", "5 PM", "6 PM" };
 
     private int currentHourIndex = 0;
@@ -23,7 +23,7 @@ public class GameTimer : MonoBehaviour
         totalTime -= Time.deltaTime;
 
         // Update hour based on how much time has passed
-        int newHourIndex = Mathf.FloorToInt((360f - totalTime) / timePerHour);
+        int newHourIndex = Mathf.FloorToInt((150 - totalTime) / timePerHour);
         if (newHourIndex != currentHourIndex && newHourIndex < hours.Length)
         {
             currentHourIndex = newHourIndex;
@@ -34,7 +34,7 @@ public class GameTimer : MonoBehaviour
         if (totalTime <= 0)
         {
             // Replace with your actual scene name or index
-            SceneManager.LoadScene("NextSceneName");
+            SceneManager.LoadScene("Ending");
         }
     }
 
