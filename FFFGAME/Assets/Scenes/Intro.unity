@@ -152,7 +152,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   displayTime: 3
-  nextSceneName: MainMenu
+  nextSceneName: Opening
   blackScreen: {fileID: 178411276}
   fadeDuration: 1
 --- !u!4 &11684153
